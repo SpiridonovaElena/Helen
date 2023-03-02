@@ -12,18 +12,18 @@
 #     print("Вы проиграли")
 #
 #     #  У меня через while не вышло, получилось так.
-i = 0
-while i < 5:
-    i +=1
-    number = int(input("Введите номер фишки:"))
-    color = input("Введите цвет (red? bleak):")
-    c_number = 5
-    c_color = 'red'
-    if number==c_number and color==c_color:
-        print('Победа!')
-        break
-    else:
-        print(f'Не угадали!, Осталось {5-i} попыток')
-else:
-    print('Вы проиграли!')
+# i = 0
+# while i < 5:
+#     i +=1
+#     number = int(input("Введите номер фишки:"))
+#     color = input("Введите цвет (red? bleak):")
+#     c_number = 5
+#     c_color = 'red'
+#     if number==c_number and color==c_color:
+#         print('Победа!')
+#         break
+#     else:
+#         print(f'Не угадали!, Осталось {5-i} попыток')
+# else:
+#     print('Вы проиграли!')
 

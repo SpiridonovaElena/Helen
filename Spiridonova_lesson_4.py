@@ -20,9 +20,9 @@
 #     print( i, end=" ")
 # Задача № 4
 # Дан массив чисел. Если число встречается более двух раз, то добавить его в новый массив.
-list_1 = [2,6,5,3,2,4,3,3,]
-list_2 = []
-for i in list_1:
-    if list_1.count(i) >= 2:
-        list_2.append(i)
-print(list_2)
+# list_1 = [2,6,5,3,2,4,3,3,]
+# list_2 = []
+# for i in list_1:
+#     if list_1.count(i) >= 2:
+#         list_2.append(i)
+# print(list_2)
