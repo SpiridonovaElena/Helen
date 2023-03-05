@@ -1,13 +1,6 @@
-	# Напишите программу, которая запрашивает у пользователя последовательность чисел,
-# сохраняет их в кортеж и выводит на экран сумму и произведение этих чисел.
-
-
-program = ((input("Введите 5 чисел от 1 до 9:")))
-a = list(program)
-n = 1
-print(tuple(a))
-for i in a:
-    if i == int:
-     n *= i
-    print(i)
-    print(sum(a))
+def factorial_recursive(n):
+    if n == 1:
+        return n
+    else:
+        return n*factorial_recursive(n-1)
+ print(factorial_recursive)
