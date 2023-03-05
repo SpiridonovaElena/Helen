@@ -10,9 +10,12 @@
 # 2. Напишите функцию, которая принимает на вход список чисел
 # и возвращает их среднее значение.
 # def Spisok (L):
-#     return sum(L)/len(L)
-# print(list(input("Введите несколько чисел:")))
-# print("Среднее значение:", )  # А ЗДЕСЬ Я УЖЕ ЗАПУТАЛАСЬ, ПОТОМУ ЧТО КАКИЕ АРГУМЕНТЫ НЕ СТАВЛЮ, ВСЕ ПОДЧЕРКИВАЕТ КРАСНЫМ(((
+#     summa = 0
+#     for i in L:
+#         summa += int(i)
+#     return summa/len(L)
+# my_list = list(input("Введите несколько чисел:"))
+# print("Среднее значение:", Spisok(my_list))
 
 
 
@@ -41,11 +44,13 @@
 # 5. Решите задачу с использованием вложенной функции is_square.
 # Предположим, у нас есть список чисел и мы хотим найти все числа,
 # которые являются квадратами других чисел в этом списке.
-# Шаблон кода (ориентировачный):
 # def find_square_numbers(numbers):
 #     def is_square(number):
-#         return '...'
+#         return number**0.5 in numbers
+#     new_list = []
+#     for i in numbers:
+#         if is_square(i): new_list.append(i)
+#     return new_list
 #
-#     return '...'
+# print(find_square_numbers([1,3,2,5,6,7,8,9]))
 
-# А С ВЛОЖЕННОЙ ФУНКЦИЕЙ БЕДА
