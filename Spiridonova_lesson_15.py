@@ -3,15 +3,13 @@
 # 1. Создайте класс Person, который имеет атрибуты name и age, а также метод greet()
 # (выводит приветствие на экран с именем персоны).
 # class Person:
-#     name = None
-#     age = None
-# #
-# men = Person()
-# men.name = 'Юрий'
-# def greet(self,name,age):
-#        self.name = name
-#        self.age = age
-# print(f'Добро пожаловать! {men.name}')
+#     name = 'Юрий'
+#     # age = 28
+#     def greet(self):
+#      print(f'Добро пожаловать! {Person.name}')
+#
+# men = Person() # cоздаем объект men  класса Person
+# men.greet()
 
 # 2. Создайте класс Car, который имеет атрибуты make, model и year, а также метод get_info()
 # (возвращает строку, содержащую информацию о машине).
