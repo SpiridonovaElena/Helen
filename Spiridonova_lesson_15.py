@@ -7,7 +7,6 @@
 #     # age = 28
 #     def greet(self):
 #      print(f'Добро пожаловать! {Person.name}')
-#
 # men = Person() # cоздаем объект men  класса Person
 # men.greet()
 
