@@ -1,44 +1,48 @@
-# №1. Если в функцию передаётся кортеж, то посчитать длину всех его строк.
-# Если список, то посчитать кол-во букв и чисел в нём.
-# Число – кол-во нечётных цифр.
-# Строка – кол-во букв.
-# Сделать проверку со всеми этими случаями.
-# Использовать готовые типы данных, с клавиатуры ничего не вводится
-# Например function([1,2,3,'a','bc8?']) -> 4 числа, 3 буквы
-# function((1,2,3,'a','bc8?',7,8,9)) -> 5 символов
-# function(788) -> 1
-# function('788') -> 0 букв
-# №2. Привяжите к предыдущей функции декоратор, который будет выводить информацию о том,
-# какой тип данных вы отправили: кортеж, список, число, строку или какой-то другой тип данных
-def Tip (fn):
-    def wrapper(W):
-        print(f"Введенный тип данных:{type(W)}")
-        return fn(W)
-    return wrapper
-@Tip
-def function (x):
-    if isinstance(x, tuple):
-        len_count_string = 0 # Счетчик длины всех строк
-        for i in x:
-            if type(i) is str: len_count_string += len(i)
-        return f"Длина всех строк: {len_count_string}"
-    elif isinstance(x, list):
-        letters = 0 # Счетчик букв
-        numbers = 0 # Счетчик цифр
-        for i in str(x):
-            if i.isalpha():
-                letters +=1
-            if i.isdigit():
-                numbers +=1
-        return f"Количество букв:{letters} Количество цифр: {numbers}"
-    elif isinstance(x, int):
-        return f"Количество нечетных цифр: {len([i for i in str(x) if i in '13579'])}"
-    elif isinstance(x, str):
-        return f"Количество букв: {len([i for i in x if str(i).isalpha()])}"
-    else:
-      print("Укажите верные данные:")
-print(function([1,2,3,'a',8,'bc8?']))
-print(function((1,2,3,'a','bc8?',7,8,9)))
-print(function(38525))
-print(function('k55l2p'))
+# class calculator:
+#
+# a = float(input('Введите первое число:'))
+# b = float(input('Введите второе число:'))
+# sign = input('Введите операцию(+-*/):')
+# if  sign == '+': print(a+b)
+# elif sign == '-': print(a-b)
+# elif sign == '*': print(a*b)
+# elif sign == '/':
+#      if b!= 0: print(a/b)
+#      else: print('На ноль делить нельзя!')
+#
+#
+#
+# class calculator:
+#
+#     one = float(input('Введите первое число:'))
+#     two = float(input('Введите второе число:'))
+#
+#     def __init__(self, a, b):
+#              self.num1 = a
+#              self.num2 = b
+#
+#     def addition(self):
+#         print(self.num1 + self.num2)
+#         return self.num1 + self.num2
+#
+#     def sub(self):
+#         print(self.num1 + self.num2)
+#         return self.num1 + self.num2
+#
+#     def mul(self):
+#         print(self.num1 * self.num2)
+#         return self.num1 * self.num2
+#
+#     def div(self):
+#         print(self.num1 / self.num2)
+#         return self.num1 / self.num2
+# if __name__ == "__main__":
+#
+#  ABC = calculator()
+# ABC.addition()
+# ABC.sub()
+# ABC.mul()
+# ABC.div()
+#
+
 
