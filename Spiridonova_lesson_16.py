@@ -2,31 +2,24 @@
 # Калькулятор. Создать класс, где реализованы методы математических операция (+-/*)
 # и функция (вне класса) для ввода данных.
 
-
 class Calculator:
-    a = float(input('Введите первое число:'))
-    b = float(input('Введите второе число:'))
-    sign = str(input('Введите операцию(+-*/):'))
-    def add(self, a, b):
-        if  sign == '+': print(a+b)
-        return a+b
-    def sub(self, a, b):
-        if sign == '-': print(a-b)
-        return a - b
-    def mult(self, a, b):
-        if sign == '*':print(a*b)
-        return (a,"*",b)
-    def div(self, a, b):
-        if b!= 0: print(a/b)
-        return (a,"/", b)
-        # else:
-        # print (a, "/",b,'На ноль делить нельзя!')
+    def __init__(self,a,b):
+        self.a = float(input('Введите первое число:'))
+        self.b = float(input('Введите второе число:'))
+    def add(self):
+        return self.a + self.b
+    def sub(self):
+        return self.a - self.b
+    def mult(self):
+        return self.a * self.b
+    def div(self):
+        return self.a / self.b
 
-calculator = Calculator()
-a = Calculator().a
-b = Calculator().b
-sign = Calculator().sign
-calculator.div(a,b)
-calculator.add(a,b)
-calculator.sub(a,b)
-calculator.mult(a,b)
+sign = input('Введите операцию(+-*/):')
+calculator = Calculator(1,2)
+
+if sign == "/": print(calculator.div())
+elif sign == "+": print(calculator.add())
+elif sign == "-": print(calculator.sub())
+elif sign == "*": print(calculator.mult())
+else: print('Такой операции нет')
