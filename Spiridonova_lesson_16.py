@@ -17,7 +17,6 @@ class Calculator:
 
 sign = input('Введите операцию(+-*/):')
 calculator = Calculator(1,2)
-
 if sign == "/": print(calculator.div())
 elif sign == "+": print(calculator.add())
 elif sign == "-": print(calculator.sub())
