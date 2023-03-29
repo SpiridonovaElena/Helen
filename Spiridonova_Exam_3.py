@@ -6,22 +6,18 @@
 # имя и возраст.
 #
 # class Student:
-#     name = None
-#     age = None
+#     name = 'Юрий'
+#     age = 26
 #     def change_name(self):
 #         print(input('Введите другое имя:'))
 #     def change_age(self):
 #         print(input('Введите другой возраст:'))
-#
-#     def greet(self,name,age):
-#         self.name = name
-#         self.age = age
-#         print(f'Ваше имя: {self.name}, Ваш возраст:{self.age}')
-# student = Student()
-# student.greet('Helen',25)
-# student.change_name()
-# student.change_age()
-
+# def func():
+#    student = Student()
+#    student.change_name()
+#    student.change_age()
+# print(f'Ваше имя: {Student.name} и возраст: {Student.age}')
+# func()
 
 # 2.	Напишите функцию, которая принимает на вход список чисел и возвращает сумму квадратов
 # всех четных чисел в списке.
@@ -42,54 +38,53 @@
 # class Calculator:
 #     a = float(input('Введите первое число:'))
 #     b = float(input('Введите второе число:'))
-
+#
 #     def add(self):
 #         return self.a + self.b
-
+#
 #     def sub(self):
 #         return self.a - self.b
-
+#
 #     def mult(self):
 #         return self.a * self.b
-
+#
 #     def div(self):
 #         return self.a / self.b
-#
-# sign = input('Введите операцию(+-*/):')
-# calculator = Calculator()
-# if sign == "/": print(calculator.div())
-# elif sign == "+": print(calculator.add())
-# elif sign == "-": print(calculator.sub())
-# elif sign == "*": print(calculator.mult())
-# else: print('Такой операции нет')
-
+# def func():
+#     chislo = Calculator()
+#     znak = input('Введите операцию(+-*/):')
+#     if znak == "/": print(chislo.div())
+#     elif znak == "+": print(chislo.add())
+#     elif znak == "-": print(chislo.sub())
+#     elif znak == "*": print(chislo.mult())
+#     else: print('Такой операции нет')
+# func()
 
 
 # 4.	Создайте класс "Автомобиль", который имеет атрибуты "марка", "модель", "год_выпуска",
 # "цвет" и метод "описание", который выводит описание автомобиля в виде строки.
 # Напишите функцию, которая создает объект класса "Автомобиль", запрашивая у пользователя
 # информацию о марке, модели, годе выпуска и цвете, а затем выводит описание автомобиля.
-
+#
 # class Car:
 #     marka = 'volkswagen passat B3'
 #     model ='universal'
 #     year = 1993
 #     color ='white'
-
+#
 #     def description(self):
 #         print(f'Марка:{Car.marka}, модель: {Car.model}, год выпуска:{Car.year},цвет:{Car.color}')
-
-#     def create_car(self):
-#         print(f'Ваша марка автомобиля:{B3.marka}, модель: {B3.model}, год выпуска:{B3.year},цвет:{B3.color}')
 #
-# B3 = Car
-# B3.description(1)
+# def func():
+#     auto = Car()
+#     auto.marka = input('Введите марку автомобиля:')
+#     auto.model = input('Введите модель автомобиля:')
+#     auto.year = int(input('Введите год автомобиля:'))
+#     auto.color = input('Введите цвет автомобиля:')
+#     print(f'Марка:{auto.marka}, модель: {auto.model}, год выпуска:{auto.year},цвет:{auto.color}')
+# Car.description(1)
+# func()
 
-# B3.marka = input('Введите марку автомобиля:')
-# B3.model = input('Введите модель автомобиля:')
-# B3.year = int(input('Введите год автомобиля:'))
-# B3.color = input('Введите цвет автомобиля:')
-# B3.create_car(1)
 
 # 5.	Создайте класс "Сотрудник", который имеет атрибуты "имя", "фамилия", "должность" и метод
 # "описание", который выводит описание сотрудника в виде строки. Создайте класс "Отдел",
@@ -99,34 +94,29 @@
 # несколько сотрудников в отдел, после чего выводит список всех сотрудников в отделе
 # и их описания. Затем функция предлагает пользователю удалить одного из сотрудников и
 # выводит обновленный список сотрудников и их описания.
-
-# class Sotrudnik():
-#     name = input('Ваше имя:')
-#     surname = input('Ваша фамилия: ')
-#     dolghnost = input('Ваша должность: ')
-#     # @ abstractmethod
+#
+# class Sotrudnik:
+#     name = 'USERNAME'
+#     surname = None
+#     dolghnost = None
 #     def description(self):
 #         print(f'Имя-{Sotrudnik.name}, Фамилия- {Sotrudnik.surname}, Должность-{Sotrudnik.dolghnost}')
-# class Otdel(Sotrudnik):
+# class Otdel:
 #     title = None # (название)
-#     list_sotrudnik = None
+#     list_sotrudnik = []
 #
-#     def __init__(self, name, surname, dolghnost):
-#         self.name = name
-#         self.surname = surname
-#         self.dolghnost = dolghnost
+#     def add_sotrudnika(self,name_s):
+#         self.list_sotrudnik.append(name_s)
+#     def delete_sotrudnika(self,name_s):
+#         self.list_sotrudnik.remove(name_s)
+# def creat_sort(dep_name):
+#     dep_object = Otdel()
+#     dep_object.department_name = dep_name
+#     a = input('Хотите ли добавить сотрудника? ')
+#     if a: dep_object.add_sotrudnika(input('Введите имя: '))
+#     print(dep_object.list_sotrudnik)
+#     b = input('Хотите ли удалить сотрудников?')
+#     if b: dep_object.delete_sotrudnika(input('Введите имя: '))
+#     print(dep_object.list_sotrudnik)
 #
-#     def add_sotrudnika(self):
-#         print(input(f'Добавьте несколько сотрудников в отдел: {self.name},{self.surname},{self.dolghnost}'))
-#     def delete_sotrudnika(self):
-#         print(input(f'Удалите одного из сотрудников:{self.name},{self.surname},{self.dolghnost}'))
-#
-#
-# chel = Sotrudnik()
-# chel.description()
-# chel1 = Otdel('анна', 'котяк', 'врач')
-# chel1.add_sotrudnika()
-# chel1.delete_sotrudnika()
-
-# С ЭТОЙ ЗАДАЧЕЙ ПРОБЛЕМНО, Я ПРОБОВАЛА ЗАВОДИТЬ НАЗВАНИЯ ЧЕРЕЗ СПИСОК, СЛОВАРЬ, АРГСЫ И КРАВГСЫ, МОЖЕТ
-#ПРОСТО НИ ТАК СТАВЛЮ, НО...
+# creat_sort('Ambulance')
